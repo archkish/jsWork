@@ -1,18 +1,18 @@
-import {Box} from "./src/hm1/Box.js";
-import {Circle} from "./src/hm1/Circle.js";
+import { Box } from "./src/hm1/Box.js";
+import { Circle } from "./src/hm1/Circle.js";
 
 class Main {
-    createBox() {
-        const bgColor = document.getElementById('colorBox').value;
-        const box = new Box(100, 100, bgColor);
-        box.draw();
-    }
+  createBox() {
+    const bgColor = document.getElementById("colorBox").value;
+    const box = new Box(100, 100, bgColor);
+    box.draw();
+  }
 
-    createCircle() {
-        const bgColor = document.getElementById('colorCircle').value;
-        const circle = new Circle(100, 100, bgColor);
-        circle.draw();
-    }
+  createCircle() {
+    const bgColor = document.getElementById("colorCircle").value;
+    const circle = new Circle(100, 100, bgColor);
+    circle.draw();
+  }
 }
 
 window.app = new Main();
