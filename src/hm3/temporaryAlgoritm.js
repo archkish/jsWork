@@ -1,8 +1,8 @@
-let arr2 = [2, 1, 4, 8, 3];
-function findMax(arr, start) {
-  let maxValue = arr[start];
-  let maxIndex = start;
-  for (let i = start + 1; i < arr.length; i++) {
+let arr = [2, 1, 4, 8, 3];
+function findMax(arr, end) {
+  let maxValue = arr[0];
+  let maxIndex = 0;
+  for (let i = 0; i < end; i++) {
     if (arr[i] > maxValue) {
       maxValue = arr[i];
       maxIndex = i;
@@ -10,19 +10,20 @@ function findMax(arr, start) {
   }
 
   return maxIndex;
+  
 }
 
-selectionSort(arr2);
-
-function selectionSort(arr) {
+function Sort(arr) {
   for (let i = 0; i < arr.length; i++) {
-    let index = findMax(arr, i);
-    let tmp = arr[arr.length - 1];
-    arr[arr.length - 1] = arr[index];
+    let index = findMax(arr, arr.length - i);
+    let tmp = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i ] = arr[index];
     arr[index] = tmp;
   }
 
   return arr;
 }
 
-selectionSort(arr2);
+Sort(arr);
+
+

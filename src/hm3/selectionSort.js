@@ -1,9 +1,9 @@
 let array = [5, 7, 3, 9, 2, 1];
 
-function selectionSort(array) {
+function Sort(array) {
   for (let j = 0; j < array.length; j++) {
-    let max = -Infinity;
-    let index = null;
+    let max = array[0];
+    let index = 0;
     for (let i = 0; i < array.length - j; i++) {
       if (array[i] > max) {
         max = array[i];
@@ -19,4 +19,4 @@ function selectionSort(array) {
   return array;
 }
 
-selectionSort(array);
+Sort(array);
